@@ -159,6 +159,28 @@ namespace ForensicBones3.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> Documento (int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var inventario = await _context.InventariosEsqueletos.FindAsync(id);
+
+            if(inventario == null) 
+                return NotFound();
+            
+            var cranio = await _context.InventariosCranio
+                .Where(c => c.InventarioCranioId == id)
+                .ToListAsync();
+
+            var descricoes = await _context.DescricoesCranios.ToListAsync();
+
+            ViewBag.Inventario = inventario;
+            ViewBag.Cranio = cranio;
+
+            return View(descricoes);
+        }
+
         private bool RelatorioExists(int id)
         {
           return _context.Relatorios.Any(e => e.RelatorioId == id);
