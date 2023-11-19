@@ -11,7 +11,7 @@ namespace ForensicBones3.Models
         public DbSet<InventarioEsqueleto> InventariosEsqueletos { get; set; }
         public DbSet<InventarioCranio> InventariosCranio { get; set; }
         public DbSet<DescricaoCranio> DescricoesCranios { get; set; }
-        //public DbSet<MarcadoresCranio> MarcadoresCranios { get; set; }
+        public DbSet<MarcadoresCranio> MarcadoresCranios { get; set; }
 
     }
 }
