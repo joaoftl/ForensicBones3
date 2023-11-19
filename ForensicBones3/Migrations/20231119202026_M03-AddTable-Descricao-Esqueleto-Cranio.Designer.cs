@@ -4,6 +4,7 @@ using ForensicBones3.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForensicBones3.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231119202026_M03-AddTable-Descricao-Esqueleto-Cranio")]
+    partial class M03AddTableDescricaoEsqueletoCranio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -133,103 +135,6 @@ namespace ForensicBones3.Migrations
                     b.ToTable("InventariosEsqueleto");
                 });
 
-            modelBuilder.Entity("ForensicBones3.Models.MarcadoresCranio", b =>
-                {
-                    b.Property<int>("MarcadoresCranioId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CartilagemTireoide")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("ConchaNasalDir")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("ConchaNasalEsq")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("Esfenoide")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("EtmoideDir")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("EtmoideEsq")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("Frontal")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("Hioide")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("InventarioCranioId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LacrimalDir")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("LacrimalEsq")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("Mandibula")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("Maxilar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("NasalEsq")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("Ocipital")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("ParietalDir")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("ParietalEsq")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("TemporalDir")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("TemporalEsq")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("Vomer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("ZigomaticoDir")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.Property<string>("ZigomaticoEsq")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
-
-                    b.HasKey("MarcadoresCranioId");
-
-                    b.ToTable("MarcadoresCranios");
-                });
-
             modelBuilder.Entity("ForensicBones3.Models.Relatorio", b =>
                 {
                     b.Property<int>("RelatorioId")
@@ -320,17 +225,6 @@ namespace ForensicBones3.Migrations
                         .IsRequired();
 
                     b.Navigation("Relatorio");
-                });
-
-            modelBuilder.Entity("ForensicBones3.Models.MarcadoresCranio", b =>
-                {
-                    b.HasOne("ForensicBones3.Models.InventarioCranio", "InventarioCranio")
-                        .WithMany()
-                        .HasForeignKey("MarcadoresCranioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("InventarioCranio");
                 });
 
             modelBuilder.Entity("ForensicBones3.Models.Relatorio", b =>
