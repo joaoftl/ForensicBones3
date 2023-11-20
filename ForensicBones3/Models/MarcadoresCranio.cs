@@ -12,44 +12,20 @@ namespace ForensicBones3.Models
         [Display(Name = "Código do Relatório")]
         public string InventarioCranioId { get; set; }
 
-        public char Frontal { get; set; }
-        public char Ocipital { get; set; }
-        public char Esfenoide { get; set; }
-        public char Maxilar { get; set; }
-        public char Vomer { get; set; }
-        [Display(Name = "Parietal Esquerdo")]
-        public char ParietalEsq { get; set; }
-        [Display(Name = "Temporal Esquerdo")]
-        public char TemporalEsq { get; set; }
-        [Display(Name = "Concha Nasal Esquerda")]
-        public char ConchaNasalEsq { get; set; }
-        [Display(Name = "Etmoide Esquerdo")]
-        public char EtmoideEsq { get; set; }
-        [Display(Name = "Lacrimal Esquerdo")]
-        public char LacrimalEsq { get; set; }
-        [Display(Name = "Nasal Esquerdo")]
-        public char NasalEsq { get; set; }
-        [Display(Name = "Zigomatico Esquerdo")]
-        public char ZigomaticoEsq { get; set; }
-        [Display(Name = "Parietal Direito")]
-        public char ParietalDir { get; set; }
-        [Display(Name = "Temporal Direito")]
-        public char TemporalDir { get; set; }
-        [Display(Name = "Concha Nasal Direito")]
-        public char ConchaNasalDir { get; set; }
-        [Display(Name = "Etmoide Direito")]
-        public char EtmoideDir { get; set; }
-        [Display(Name = "Lacrimal Direito")]
-        public char LacrimalDir { get; set; }
-        [Display(Name = "Zigomático Direito")]
-        public char ZigomaticoDir { get; set; }
-        public char Hioide { get; set; }
+        [Display(Name = "Crista Nucal")]
+        public char CristaNucal { get; set; }
 
-        [Display(Name = "Cartilagem Tireóide")]
-        public char CartilagemTireoide { get; set; }
+        [Display(Name = "Processo Mastoide")]
+        public char ProcessoMastoide { get; set; }
 
-        [Display(Name = "Mandíbula")]
-        public char Mandibula { get; set; }
+        [Display(Name = "Eminência Mentoniana")]
+        public char EminenciaMentoniana { get; set; }
+
+        [Display(Name = "Supra Orbital")]
+        public char SupraOrbital {  get; set; }
+
+        [Display(Name = "Área da Glabela")]
+        public char AreaGlabela { get; set; }
 
         public InventarioCranio InventarioCranio { get; set; }
 

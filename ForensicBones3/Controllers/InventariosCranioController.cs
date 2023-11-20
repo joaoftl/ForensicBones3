@@ -56,7 +56,7 @@ namespace ForensicBones3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("InventarioCranioId,InventarioEsqueletoId,FotoCranio,Observacoes")] InventarioCranio inventarioCranio)
+        public async Task<IActionResult> Create([Bind("InventarioCranioId,InventarioEsqueletoId,FotoCranio,Frontal,Ocipital,Esfenoide,Maxilar,Vomer,ParietalEsq,TemporalEsq,ConchaNasalEsq,EtmoideEsq,LacrimalEsq,NasalEsq,ZigomaticoEsq,ParietalDir,TemporalDir,ConchaNasalDir,EtmoideDir,LacrimalDir,ZigomaticoDir,Hioide,CartilagemTireoide,Mandibula,Observacoes")] InventarioCranio inventarioCranio)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace ForensicBones3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("InventarioCranioId,InventarioEsqueletoId,FotoCranio,Observacoes")] InventarioCranio inventarioCranio)
+        public async Task<IActionResult> Edit(int id, [Bind("InventarioCranioId,InventarioEsqueletoId,FotoCranio,Frontal,Ocipital,Esfenoide,Maxilar,Vomer,ParietalEsq,TemporalEsq,ConchaNasalEsq,EtmoideEsq,LacrimalEsq,NasalEsq,ZigomaticoEsq,ParietalDir,TemporalDir,ConchaNasalDir,EtmoideDir,LacrimalDir,ZigomaticoDir,Hioide,CartilagemTireoide,Mandibula,Observacoes")] InventarioCranio inventarioCranio)
         {
             if (id != inventarioCranio.InventarioCranioId)
             {

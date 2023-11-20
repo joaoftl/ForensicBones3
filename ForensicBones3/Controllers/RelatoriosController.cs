@@ -164,6 +164,10 @@ namespace ForensicBones3.Controllers
             if (id == null)
                 return NotFound();
 
+            var codigo = await _context.Relatorios
+                .Where(c => c.RelatorioId == id)
+                .ToListAsync();
+
             var inventario = await _context.InventariosEsqueletos.FindAsync(id);
 
             if(inventario == null) 
@@ -175,6 +179,7 @@ namespace ForensicBones3.Controllers
 
             var descricoes = await _context.DescricoesCranios.ToListAsync();
 
+          
             ViewBag.Inventario = inventario;
             ViewBag.Cranio = cranio;
 

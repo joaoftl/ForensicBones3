@@ -20,9 +20,9 @@ namespace ForensicBones3.Models
 
         public Relatorio Relatorio { get; set; }
 
-        
 
-
+        [Display(Name = "Inventário Crânio")]
+        public InventarioCranio Cranio { get; set; }
 
         //[Display(Name = "Id Inventário do Crânio")]
         //public int InventarioCranioId { get; set; }
